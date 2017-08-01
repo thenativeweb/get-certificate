@@ -1,0 +1,32 @@
+{
+  "name": "get-certificate",
+  "version": "0.0.0",
+  "description": "Loads a certificate and its private key from a directory.",
+  "contributors": [
+    {
+      "name": "Golo Roden",
+      "email": "golo.roden@thenativeweb.io"
+    },
+    {
+      "name": "Jan-Hendrik Grundhöfer",
+      "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+    }
+  ],
+  "main": "dist/getCertificate.js",
+  "dependencies": {},
+  "devDependencies": {
+    "assertthat": "0.10.3",
+    "roboter": "0.15.4",
+    "roboter-server": "0.15.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/get-certificate.git"
+  },
+  "keywords": [
+    "get",
+    "certificate"
+  ],
+  "license": "MIT",
+  "private": true
+}
