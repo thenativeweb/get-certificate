@@ -2,7 +2,7 @@
 
 get-certificate loads a certificate and its private key from a directory.
 
-## Quick Start
+## Quick start
 
 First you need to add a reference to get-certificate to your application:
 
