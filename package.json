@@ -24,9 +24,7 @@
     "url": "git://github.com/thenativeweb/get-certificate.git"
   },
   "keywords": [
-    "get",
-    "certificate"
+    "certificates"
   ],
-  "license": "MIT",
-  "private": true
+  "license": "MIT"
 }

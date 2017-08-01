@@ -1,25 +1,27 @@
 # get-certificate
+
 get-certificate loads a certificate and its private key from a directory.
 
 ## Quick Start
 
-First you need to add a reference to get-certificate to your application.
+First you need to add a reference to get-certificate to your application:
 
 ```javascript
 const getCertificate = require('get-certificate');
 ```
 
-Now you are able to load a certificate and its private key from a directory.
+Now you are able to load a certificate and its private key from a directory:
 
 ```javascript
-const directory = '...';
+const directory = '/...';
+
 const result = getCertificate(directory);
 
 console.log(result.certificate);
 console.log(result.privateKey);
 ```
 
-**Notice**: The certificate directory must have a `certificate.pem` and a `privateKey.pem` file.
+*Please note that the directory must contain a `certificate.pem` and a `privateKey.pem` file.*
 
 ## Running the build
 
