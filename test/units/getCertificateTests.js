@@ -4,7 +4,7 @@ const path = require('path');
 
 const assert = require('assertthat');
 
-const getCertificate = require('../../lib/getCertificate');
+const getCertificate = require('../../src/getCertificate');
 
 suite('getCertificate', () => {
   test('is a function.', done => {
@@ -20,7 +20,7 @@ suite('getCertificate', () => {
   });
 
   test('returns a certificate and a private key.', done => {
-    const certificateDirectory = path.join(__dirname, '..', 'certificates', 'localhost');
+    const certificateDirectory = path.join(__dirname, '..', 'shared', 'certificates', 'localhost');
 
     const certificate = getCertificate(certificateDirectory);
 
@@ -33,7 +33,7 @@ suite('getCertificate', () => {
   });
 
   test('throws an error if the given directory does not exist.', done => {
-    const certificateDirectory = path.join(__dirname, '..', 'certificates', 'non-existent');
+    const certificateDirectory = path.join(__dirname, '..', 'shared', 'certificates', 'non-existent');
 
     assert.that(() => {
       getCertificate(certificateDirectory);
@@ -42,7 +42,7 @@ suite('getCertificate', () => {
   });
 
   test('throws an error if the given directory is empty.', done => {
-    const certificateDirectory = path.join(__dirname, '..', 'certificates', 'empty');
+    const certificateDirectory = path.join(__dirname, '..', 'shared', 'certificates', 'empty');
 
     assert.that(() => {
       getCertificate(certificateDirectory);
@@ -51,7 +51,7 @@ suite('getCertificate', () => {
   });
 
   test('throws an error if the certificate is missing.', done => {
-    const certificateDirectory = path.join(__dirname, '..', 'certificates', 'without-certificate');
+    const certificateDirectory = path.join(__dirname, '..', 'shared', 'certificates', 'without-certificate');
 
     assert.that(() => {
       getCertificate(certificateDirectory);
@@ -60,7 +60,7 @@ suite('getCertificate', () => {
   });
 
   test('throws an error if the private key is missing.', done => {
-    const certificateDirectory = path.join(__dirname, '..', 'certificates', 'without-private-key');
+    const certificateDirectory = path.join(__dirname, '..', 'shared', 'certificates', 'without-private-key');
 
     assert.that(() => {
       getCertificate(certificateDirectory);
